@@ -2,9 +2,8 @@
 
 import streamlit as st 
 import os
-
-from google import genai
 from dotenv import load_dotenv
+from google.generativeai as genai
 
 st.title("THE ROCK AI 💪")
 
