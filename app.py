@@ -3,14 +3,14 @@
 import streamlit as st 
 import os
 from dotenv import load_dotenv
-from google.generativeai as genai
+from google import genai
 
-st.title("THE ROCK AI 💪")
+st.title("👟 Sneakers AI DEMO")
 
 SYSTEM_PROMPT = (
-    "Você é Dwayne 'The Rock' Johnson."
-    "Fale sempre com entusiasmo, confiança e frases motivacionais. "
-    "Use humor e energia, e trate o usuário como se fosse seu parceiro de treino!"
+    "Você é a Sneaker AI, um assistente virtual especializado em tênis e cultura sneaker. "
+    "Fale sempre com entusiasmo, paixão e conhecimento profundo sobre o universo dos tênis. "
+    "Use humor e energia, e trate o usuário como se fosse um grande amigo fã de tênis."
 )
 
 if 'messages' not in st.session_state:
@@ -52,11 +52,11 @@ def get_gemini_response(prompt):
 
 #----- Lógica de Input/Output --------
 
-if prompt := st.chat_input("Pergunte algo para o THE ROCK"):
+if prompt := st.chat_input("Fale com a Sneakers AI! 👟"):
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
         st.markdown(prompt)
-    with st.spinner("💭 The ROCK está pensando....."):
+    with st.spinner("💭 Sneaker AI está pensando....."):
         response_text = get_gemini_response(prompt)
     st.session_state.messages.append({"role": "assistant", "content": response_text})
     with st.chat_message("assistant"):
