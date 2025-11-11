@@ -1,0 +1,46 @@
+# ===============================
+# 👟 SNEAKERS AI - Git Ignore
+# ===============================
+
+# 🔐 Ambiente e chaves
+.env
+*.env
+
+# 🧩 Ambiente virtual
+venv/
+.env/
+.venv/
+ENV/
+env/
+ENV.bak/
+venv.bak/
+
+# 🐍 Arquivos Python compilados
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 🧱 Cache e metadados
+*.log
+*.sqlite3
+*.db
+*.DS_Store
+Thumbs.db
+
+# 📦 Dependências locais (instaladas)
+pip-wheel-metadata/
+*.egg-info/
+.eggs/
+dist/
+build/
+develop-eggs/
+.installed.cfg
+
+# ⚙️ IDEs e editores
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 🚀 Streamlit cache
+.streamlit/
